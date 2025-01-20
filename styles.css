@@ -9,3 +9,6 @@
 .arrow {
     fill: black;
 }
+#graph {
+    border: 1px solid black;
+}
