@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graph Visualization</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h2>Graph Visualization</h2>
+    <svg id="graph" width="600" height="600"></svg>
+    <script src="script.js"></script>
+    <script>
+
+	// Example of defining the graph
+	const nodes = [
+	    { id: "A", x: 100, y: 100, color: "red" },
+	    { id: "LongLabelNode", x: 300, y: 100, color: "green" },
+	    { id: "C", x: 200, y: 300, color: "blue" }
+	];
+
+	const edges = [
+	    { source: 0, target: 1, directed: true },  // A -> LongLabelNode
+	    { source: 1, target: 2, directed: false }, // LongLabelNode -- C
+	    { source: 2, target: 0, directed: true }   // C -> A
+	];
+
+	// Create the graph
+	createGraph(nodes, edges);
+    </script>
+</body>
+</html>
